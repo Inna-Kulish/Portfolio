@@ -1,0 +1,42 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 10%;
+  height: 6.5rem;
+  box-shadow: 0 1px 4px $shadow;
+}
+
+.logo {
+    fill: $prime;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.link {
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+  color: $text-color;
+}
+
+.link:active,
+.link:hover,
+.link:focus {
+  color: $prime;
+  border-bottom: 0.2rem solid $hover;
+  padding: 15px 0;
+}
