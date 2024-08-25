@@ -1,8 +1,9 @@
 export enum SectionIds {
-    about = 'about',
-    skills = 'skills',
-    education = 'education',
-    work = 'work',
+  about = "about",
+  skills = "skills",
+  education = "education",
+  work = "work",
+  contact = "contact",
 }
 
 interface NavItem {
@@ -31,5 +32,9 @@ export const NAV_LINKS: NavItem[] = [
   {
     title: "Work",
     sectionId: SectionIds.work,
+  },
+  {
+    title: "Contact",
+    sectionId: SectionIds.contact,
   },
 ];

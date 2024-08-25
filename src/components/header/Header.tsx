@@ -1,8 +1,8 @@
 import React from "react";
-import { NAV_LINKS } from "./navList";
 import Logo from "@/assets/icons/header/logo.svg?react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
+import { NAV_LINKS } from "./navList";
 
 const Header: React.FC = () => {
     return (
