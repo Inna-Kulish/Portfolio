@@ -4,7 +4,7 @@ import Hero from "../../components/Hero/Hero";
 
 const Home: React.FC = () => (
     <>
-        <Header />
+        <Header/>
         <Hero/>
     </>
 );
