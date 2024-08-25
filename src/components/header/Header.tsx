@@ -10,7 +10,7 @@ const Header: React.FC = () => {
             <Link to="/"><Logo className={styles.logo} /></Link>
             <nav className={styles.navbar}>
                 <ul>
-                    {NAV_LINKS.map(({title, sectionId, navLink}, index) => (
+                    {NAV_LINKS.map(({title}, index) => (
                         <li key={`${title}_${index}`} className={styles.item}><a className={styles.link}>{title}</a></li>
                     ))}
                 </ul>
