@@ -9,6 +9,9 @@ import {
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
+import TypingText from "./TypingText";
+import Arrow from "@/assets/icons/hero/arrow.svg?react";
+import heroPhoto from "@/assets/images/hero/hero-photo.jpg";
 
 const Hero: React.FC = () => {
   const [init, setInit] = useState(false);
@@ -97,7 +100,7 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <section className={styles.heroSection}>
+    <section className={`.container ${styles.heroSection}`}>
       {init && (
         <Particles
           className={styles.particles}
@@ -107,14 +110,17 @@ const Hero: React.FC = () => {
         />
       )}
       <div className={styles.content}>
-        <h2>
-          Hi There, I'm Inna <span>Kulish</span>
+        <h2 className={styles.title}>
+          Hi There, <br /> I'm Inna <span>Kulish</span>
         </h2>
-        <p>
-          i am into <span></span>
+        <p className={styles.desc}>
+          I am <TypingText text={'Frontend Developer!'} delay={150} infinite={true} />
         </p>
-        <a href="">About Me</a>
+        <a className={styles.btn} href="">About Me<Arrow/></a>
         <SocialsList />
+      </div>
+      <div className={styles.imgBox}>
+        <img src={heroPhoto} alt="portrait Inna Kulish" />
       </div>
     </section>
   );
