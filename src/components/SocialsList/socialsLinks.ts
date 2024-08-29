@@ -4,17 +4,17 @@ import Telegram from "@/assets/icons/socialsList/telegram.svg?react";
 
 export const SOCIALS_LINKS = [
   {
-    name: "LinkedIn",
+    name: "linkedIn",
     Icon: Linkedin,
     link: "https://www.linkedin.com/in/inna-kulish/",
   },
   {
-    name: "GitHub",
+    name: "gitHub",
     Icon: Github,
     link: "https://github.com/Inna-Kulish",
   },
   {
-    name: "Telegram",
+    name: "telegram",
     Icon: Telegram,
     link: "https://t.me/norelajest",
   },
