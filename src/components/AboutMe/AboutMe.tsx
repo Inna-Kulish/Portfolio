@@ -3,10 +3,11 @@ import styles from "./AboutMe.module.scss";
 import User from "@/assets/icons/about/user.svg?react";
 import girl from "@/assets/images/about/girl.png";
 import ArrowRight from "@/assets/icons/about/arrowRight.svg?react";
+import { SectionIds } from "../header/navList";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className={styles.about}>
+    <section id={SectionIds.about} className={styles.about}>
       <h2 className={styles.title}>
         <User /> About <span>Me</span>
       </h2>

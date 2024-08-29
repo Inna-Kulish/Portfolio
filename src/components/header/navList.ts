@@ -1,4 +1,5 @@
 export enum SectionIds {
+  home = "home",
   about = "about",
   skills = "skills",
   education = "education",
@@ -9,13 +10,14 @@ export enum SectionIds {
 interface NavItem {
   title: string;
   navLink?: string;
-  sectionId?: SectionIds;
+  sectionId: SectionIds;
 }
 
 export const NAV_LINKS: NavItem[] = [
   {
     title: "Home",
     navLink: "/",
+    sectionId: SectionIds.home,
   },
   {
     title: "About",

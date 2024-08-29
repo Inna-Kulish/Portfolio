@@ -12,6 +12,7 @@ import {
 import TypingText from "./TypingText";
 import Arrow from "@/assets/icons/hero/arrow.svg?react";
 import heroPhoto from "@/assets/images/hero/hero-photo.jpg";
+import { SectionIds } from "../header/navList";
 
 const Hero: React.FC = () => {
   const [init, setInit] = useState(false);
@@ -99,8 +100,15 @@ const Hero: React.FC = () => {
     []
   );
 
+  const scrollToSection = (sectionId: SectionIds) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className={styles.heroSection}>
+    <section id={SectionIds.home} className={styles.heroSection}>
       {init && (
         <Particles
           className={styles.particles}
@@ -116,7 +124,7 @@ const Hero: React.FC = () => {
         <p className={styles.desc}>
           I am <TypingText text={'Frontend Developer!'} delay={150} infinite={true} />
         </p>
-        <a className={styles.btn} href="">About Me<Arrow/></a>
+        <a className={styles.btn} onClick={()=>scrollToSection(SectionIds.about)}>About Me<Arrow/></a>
         <SocialsList />
       </div>
       <div className={styles.imgBox}>
