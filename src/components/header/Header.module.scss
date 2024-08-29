@@ -4,11 +4,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
+
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1.7rem 10%;
   height: 6.5rem;
+
+  align-items: center;
+  justify-content: space-between;
+
   background-color: $white;
   box-shadow: 0 1px 4px $shadow;
 }
@@ -29,6 +32,7 @@
 }
 
 .link {
+  padding: 15px 0;
   font-weight: 600;
   letter-spacing: 0.04rem;
   color: $text-color;
