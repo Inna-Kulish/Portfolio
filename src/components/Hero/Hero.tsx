@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <section className={`.container ${styles.heroSection}`}>
+    <section className={styles.heroSection}>
       {init && (
         <Particles
           className={styles.particles}

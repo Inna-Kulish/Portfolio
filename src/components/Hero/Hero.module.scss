@@ -236,7 +236,6 @@
     background-color: $white;
     fill: $btn;
     transition: $transition;
-    animation: bounce-in-top 1s linear infinite;
   }
 }
 
@@ -246,6 +245,7 @@
 
   svg {
     fill: $btn-hover;
+    animation: bounce-in-top 1s linear infinite;
   }
 }
 

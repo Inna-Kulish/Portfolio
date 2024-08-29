@@ -7,7 +7,7 @@
   gap: 15px;
 }
 
-.link {
+.linkSocial {
   display: flex;
   width: 44px;
   height: 44px;
@@ -27,44 +27,35 @@
   }
 }
 
-li:first-child:hover,
-li:first-child:focus {
-  a {
-    background-color: #007bb6;
-  }
+.linkedIn:hover,
+.linkedIn:focus {
+  background-color: #007bb6;
 
   svg {
     fill: $white;
   }
 }
 
-li:nth-child(2):hover,
-li:nth-child(2):focus {
-  a {
-    background-color: #0e0e0e;
-  }
+.gitHub:hover,
+.gitHub:focus {
+  background-color: #0e0e0e;
 
   svg {
     fill: $white;
   }
 }
 
-li:nth-child(3):hover,
-li:nth-child(3):focus {
-  a {
-    background-color: #0685da;
-  }
+.telegram:hover, .telegram:focus {
+  background-color: #0685da;
 
   svg {
-    fill: $white;
-  }
+          fill: $white;
+        }
 }
 
-li:last-child:hover,
-li:last-child:focus {
-  a {
-    background-color: #0e0e0e;
-  }
+.mail:hover,
+.mail:focus {
+  background-color: #0e0e0e;
 
   svg {
     fill: $white;

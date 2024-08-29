@@ -9,12 +9,12 @@ const SocialsList: React.FC = () => {
       <ul className={styles.list}>
         {SOCIALS_LINKS.map(({ name, Icon, link }, index) => (
           <li key={`${name}_${index}`}>
-            <a className={styles.link} href={link} target="_blank" rel="noopener noreferrer">
+            <a className={`${styles.linkSocial} ${styles[name]}`} href={link} target="_blank" rel="noopener noreferrer">
               <Icon />
             </a>
           </li>
         ))}
-        <li><a className={styles.link} href="mailto:norelajest@gmail.com"><Mail/></a></li>
+        <li><a className={`${styles.linkSocial} ${styles.mail}`} href="mailto:norelajest@gmail.com"><Mail/></a></li>
       </ul>
     </div>
   );
