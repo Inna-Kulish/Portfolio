@@ -95,21 +95,6 @@
   background-color: $white;
 }
 
-.title {
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
-
-  span {
-    color: rgb(115, 3, 167);
-  }
-
-  svg {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 .wrap {
   display: flex;
   gap: 2rem;
