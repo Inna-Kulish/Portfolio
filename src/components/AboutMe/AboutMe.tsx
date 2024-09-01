@@ -4,13 +4,12 @@ import User from "@/assets/icons/about/user.svg?react";
 import girl from "@/assets/images/about/girl.png";
 import ArrowRight from "@/assets/icons/about/arrowRight.svg?react";
 import { SectionIds } from "../header/navList";
+import Title from "../Title/Title";
 
 const AboutMe: React.FC = () => {
   return (
     <section id={SectionIds.about} className={styles.about}>
-      <h2 className={styles.title}>
-        <User /> About <span>Me</span>
-      </h2>
+      <Title title="About" span="Me" Icon={User} color="light"/>
       <div className={styles.wrap}>
         <div className={styles.imageBox}>
           <img src={girl} alt="Walking girl" />
