@@ -257,13 +257,13 @@
     margin-left: auto;
 
     border-radius: 50%;
-    box-shadow: 0 2px 8px $photo-shadow30;
+    box-shadow: 0 2px 8px $black30;
     cursor: pointer;
   }
 }
 
 .imgBox img:hover,
 .imgBox img:focus {
-  box-shadow: 0 5px 15px $photo-shadow30;
+  box-shadow: 0 5px 15px $black30;
   animation: vibrate-1 1s linear infinite;
 }
