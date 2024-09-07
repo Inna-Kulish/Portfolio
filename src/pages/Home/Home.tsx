@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Skills from "../../components/Skills/Skills";
 import Education from "../../components/Education/Education";
+import Projects from "../../components/Projects/Projects";
 
 const Home: React.FC = () => {
   return (
@@ -12,7 +13,8 @@ const Home: React.FC = () => {
       <Hero />
       <AboutMe />
       <Skills />
-      <Education/>
+      <Education />
+      <Projects/>
     </>
   );
 };

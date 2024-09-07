@@ -3,7 +3,7 @@ export enum SectionIds {
   about = "about",
   skills = "skills",
   education = "education",
-  work = "work",
+  projects = "projects",
   contact = "contact",
 }
 
@@ -32,8 +32,8 @@ export const NAV_LINKS: NavItem[] = [
     sectionId: SectionIds.education,
   },
   {
-    title: "Work",
-    sectionId: SectionIds.work,
+    title: "Projects",
+    sectionId: SectionIds.projects,
   },
   {
     title: "Contact",

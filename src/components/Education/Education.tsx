@@ -4,10 +4,11 @@ import Hat from "@/assets/icons/education/study.svg?react";
 import Title from "../Title/Title";
 import women from "@/assets/images/education/women.jpg";
 import goit from "@/assets/images/education/goit.jpg";
+import { SectionIds } from "../header/navList";
 
 const Education: React.FC = () => {
   return (
-    <section className={styles.education}>
+    <section id={SectionIds.education} className={styles.education}>
       <Title title="My" span="Education" Icon={Hat} color="light" />
       <ul className={styles.list}>
         <li className={styles.item}>
