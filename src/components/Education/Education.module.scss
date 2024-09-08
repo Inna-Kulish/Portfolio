@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 .education {
-  position: relative;
-  min-height: 80vh;
+  min-height: 50vh;
   padding: 2rem 9%;
   background-color: $gray;
 }
@@ -38,7 +37,6 @@
 
 .photo {
   flex: 1 1 20rem;
-  object-fit: contain;
   position: relative;
 }
 

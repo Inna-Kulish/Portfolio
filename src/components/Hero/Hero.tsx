@@ -36,6 +36,7 @@ const Hero: React.FC = () => {
           value: "#efefef",
         },
       },
+      fullScreen: false,
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -113,6 +114,8 @@ const Hero: React.FC = () => {
         <Particles
           className={styles.particles}
           id="tsparticles"
+          
+
           particlesLoaded={particlesLoaded}
           options={options}
         />
