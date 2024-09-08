@@ -1,7 +1,5 @@
 .projects {
-  position: relative;
-  min-height: 100vh;
-  padding: 2rem 9%;
+  padding: 2rem;
   background-color: $hero-title;
 }
 
@@ -9,13 +7,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 .item {
   position: relative;
-  flex: 1 1 30rem;
-height: 30rem;
+  flex: 1 1 25rem;
+  height: 25rem;
 
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem $black20;
@@ -48,12 +46,16 @@ height: 30rem;
 .tag {
   display: flex;
   align-items: center;
-  height: 4.5rem;
+  height: 4rem;
   width: 100%;
   padding-left: 1rem;
 
-  font-size: 22px;
+  
   background: $yellow;
+
+  h3 {
+font-size: 22px;
+  }
 }
 
 .desc {
@@ -67,8 +69,11 @@ height: 30rem;
 }
 
 .btn {
+  display: flex;
+  gap: 10px;
   margin-right: 2rem;
   padding: 1.5rem 2.5rem;
+  align-items: center;
 
   font-size: 1.5rem;
   line-height: 0;
@@ -76,4 +81,8 @@ height: 30rem;
   color: $white;
   border-radius: 0.5rem;
   background: $black;
+
+  svg {
+    fill: $white;
+  }
 }
