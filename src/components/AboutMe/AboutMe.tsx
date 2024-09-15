@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./AboutMe.module.scss";
 import User from "@/assets/icons/about/user.svg?react";
 import girl from "@/assets/images/about/girl.png";
+import girl2x from "@/assets/images/about/girl@2x.png";
 import ArrowRight from "@/assets/icons/about/arrowRight.svg?react";
 import { SectionIds } from "../header/navList";
 import Title from "../Title/Title";
@@ -12,7 +13,14 @@ const AboutMe: React.FC = () => {
       <Title title="About" span="Me" Icon={User} color="light" />
       <div className={styles.wrap}>
         <div className={styles.imageBox}>
-          <img src={girl} alt="Walking girl" />
+          <picture>
+                <source srcSet={`${girl} 1x, ${girl2x} 2x`} />
+                <img
+                  src={girl}
+                  alt="Walking girl"
+                  loading="lazy"
+                />
+              </picture>
         </div>
         <div className={styles.descWrap}>
           <h3 className={styles.name}>I'm Inna</h3>
