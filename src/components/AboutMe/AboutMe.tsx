@@ -9,7 +9,7 @@ import Title from "../Title/Title";
 const AboutMe: React.FC = () => {
   return (
     <section id={SectionIds.about} className={styles.about}>
-      <Title title="About" span="Me" Icon={User} color="light"/>
+      <Title title="About" span="Me" Icon={User} color="light" />
       <div className={styles.wrap}>
         <div className={styles.imageBox}>
           <img src={girl} alt="Walking girl" />
@@ -22,22 +22,23 @@ const AboutMe: React.FC = () => {
             applications & websites. I like to do interesting tasks, learn new
             technologies, and use best practices. I have a lot of projects in
             which I consolidate the acquired knowledge in practice.
-                  </p>
-                  <div className={styles.contact}>
-          <p>
-            <span>Email : </span>norelajest@gmail.com
           </p>
-          <p>
-            <span>Place : </span>Dnipro, Ukraine
-                      </p>
-                      </div>
-            <a className={styles.resumeBtn}
-              href="https://drive.google.com/file/d/1yEOVTId97ul4D4K7r2lr28nnz3Ph3aDx/view"
-              target="_blank"
-            >
-                          Resume
-                          <ArrowRight/>
-            </a>
+          <div className={styles.contact}>
+            <p>
+              <span>Email : </span>norelajest@gmail.com
+            </p>
+            <p>
+              <span>Place : </span>Dnipro, Ukraine
+            </p>
+          </div>
+          <a
+            className={styles.resumeBtn}
+            href="https://drive.google.com/file/d/1yEOVTId97ul4D4K7r2lr28nnz3Ph3aDx/view"
+            target="_blank"
+          >
+            Resume
+            <ArrowRight />
+          </a>
         </div>
       </div>
     </section>
