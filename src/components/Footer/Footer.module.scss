@@ -1,0 +1,107 @@
+.footer {
+  display: flex;
+  padding: 1.7rem 10%;
+  justify-content: space-between;
+}
+
+.box {
+  flex-basis: 300px;
+}
+
+.title {
+  font-size: 24px;
+  padding-bottom: 1rem;
+  font-weight: normal;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemLink {
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 18px;
+
+  transition: $transition;
+}
+
+.arrowSvg {
+  width: 18px;
+  height: 18px;
+  padding: 4px;
+  border-radius: 50%;
+  fill: $white;
+  background-color: $black;
+
+  transition: $transition;
+}
+
+.itemLink:hover,
+.itemLink:focus {
+  color: $yellow;
+
+  svg {
+    background-color: $yellow;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  align-items: center;
+  font-size: 18px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: $yellow;
+  }
+}
+
+.socialsList {
+  display: flex;
+  gap: 10px;
+}
+
+.linkSocial {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid $black;
+  background-color: $black;
+
+  transition: $transition;
+}
+
+.socialsSvg {
+  width: 16px;
+  height: 16px;
+
+  fill: $white;
+  background-color: transparent;
+
+  transition: $transition;
+}
+
+.linkSocial:hover,
+.linkSocial:focus {
+  background-color: transparent;
+
+  svg {
+    fill: $yellow;
+  }
+}
