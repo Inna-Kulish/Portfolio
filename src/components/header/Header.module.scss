@@ -17,7 +17,7 @@
 }
 
 .logo {
-    fill: $prime;
+  fill: $prime;
 }
 
 .navbar ul {
@@ -44,4 +44,55 @@
   color: $prime;
   border-bottom: 0.2rem solid $hover;
   padding: 15px 0;
+}
+
+.mobileContainer {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobileContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menuBtn {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    transition: $transition;
+  }
+}
+
+.mobileBox {
+  position: absolute;
+  top: 104px;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: $prime;
+}
+
+.mobileList {
+  position: absolute;
+  transform: translate(50%, 0);
+  font-weight: 600;
+  font-size: 20px;
+  color: $white;
+
+  a {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+  }
 }
