@@ -7,11 +7,14 @@ import Cross from "@/assets/icons/header/cross.svg?react";
 import { NAV_LINKS, SectionIds } from "./navList";
 
 const Header: React.FC = () => {
-  const [isMenuTooggled, setIsMenuToggled] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<Record<number, boolean>>({});
+  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
-  const scrollToSection = (sectionId: SectionIds) => {
+  const scrollToSection = (sectionId: SectionIds, index: number) => {
     const element = document.getElementById(sectionId);
+    setIsActive({});
     if (element) {
+      setIsActive((prev)=> ({...prev, [index]: true}));
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -26,8 +29,8 @@ const Header: React.FC = () => {
           {NAV_LINKS.map(({ title, sectionId }, index) => (
             <li key={`${title}_${index}`} className={styles.item}>
               <a
-                className={styles.link}
-                onClick={() => scrollToSection(sectionId)}
+                className={`${styles.link} ${isActive[index] ? styles.active : ''}`}
+                onClick={() => scrollToSection(sectionId, index)}
               >
                 {title}
               </a>
@@ -40,19 +43,23 @@ const Header: React.FC = () => {
       <div className={styles.mobileContainer}>
         <button
           className={styles.menuBtn}
-          onClick={() => setIsMenuToggled(!isMenuTooggled)}
+          onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
-          {isMenuTooggled ? <Cross className={styles.mobileIcon}/> : <Menu width={28} height={32} />}
+          {isMenuToggled ? (
+    <Cross className={`${styles.crossIcon} ${styles.rotatingIn}`} />
+  ) : (
+    <Menu className={`${styles.menuIcon} ${styles.rotatingOut}`} width={28} height={32} />
+  )}
         </button>
       </div>
-      {isMenuTooggled && (
+      {isMenuToggled && (
         <div className={styles.mobileBox}>
           <ul className={styles.mobileList}>
             {NAV_LINKS.map(({ title, sectionId }, index) => (
               <li key={`${title}_${index}`} className={styles.itemMobile}>
                 <a
-                  className={styles.linkMobile}
-                  onClick={() => scrollToSection(sectionId)}
+                  className={`${styles.linkMobile} ${isActive[index] ? styles.activeMobile : ''}`}
+                  onClick={() => scrollToSection(sectionId, index)}
                 >
                   {title}
                 </a>
