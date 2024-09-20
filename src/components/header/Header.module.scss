@@ -38,9 +38,14 @@
   color: $text-color;
 }
 
-.link:active,
 .link:hover,
 .link:focus {
+  color: $prime;
+  border-bottom: 0.2rem solid $hover;
+  padding: 15px 0;
+}
+
+.link.active {
   color: $prime;
   border-bottom: 0.2rem solid $hover;
   padding: 15px 0;
@@ -95,4 +100,66 @@
 
     transition: all 0.3s ease-in-out;
   }
+}
+
+.linkMobile {
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+}
+
+.linkMobile::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: $white;
+  height: 4px;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+.linkMobile:hover:before, .linkMobile:focus:before {
+  left: 0;
+  right: 0;
+}
+
+.linkMobile.activeMobile::before {
+  left: 0;
+  right: 0;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.crossIcon,
+.menuIcon {
+  transition: transform 0.3s ease;
+}
+
+.rotatingIn {
+  animation: rotateIn 0.3s forwards;
+}
+
+.rotatingOut {
+  animation: rotateOut 0.3s forwards;
 }
