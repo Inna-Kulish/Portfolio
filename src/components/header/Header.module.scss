@@ -2,12 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 1000;
 
   display: flex;
-  padding: 1.7rem 10%;
-  height: 6.5rem;
+  padding: 0 5%;
+  width: 100%;
+  height: auto;
 
   align-items: center;
   justify-content: space-between;
@@ -16,15 +16,33 @@
   box-shadow: 0 1px 4px $shadow;
 }
 
-.logo {
-  fill: $prime;
+.navbar {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
-.navbar ul {
+.logoLink {
+  padding: 15px 0;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  fill: $prime;
+
+  @media screen and (min-width: 769px) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.list {
   display: flex;
   gap: 2.5rem;
   align-items: center;
-  justify-content: center;
 }
 
 .item {
@@ -32,10 +50,13 @@
 }
 
 .link {
-  padding: 15px 0;
   font-weight: 600;
   letter-spacing: 0.04rem;
   color: $text-color;
+
+  @media screen and (min-width: 769px) {
+    padding: 45px 0;
+  }
 }
 
 .link:hover,
@@ -51,32 +72,20 @@
   padding: 15px 0;
 }
 
-.mobileContainer {
-  display: none;
-}
+.menuBtn {
+  display: flex;
+  padding: 25px 0;
+  align-items: center;
+  transition: $transition;
 
-@media screen and (max-width: 768px) {
-  .navbar {
+  @media screen and (min-width: 769px) {
     display: none;
-  }
-
-  .mobileContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .menuBtn {
-    display: flex;
-    padding: 0;
-    align-items: center;
-    transition: $transition;
   }
 }
 
 .mobileBox {
   position: absolute;
-  top: 104px;
+  top: 94px;
   right: 0;
   width: 50vw;
   height: 100vh;
@@ -121,7 +130,8 @@
   transition: $transition;
 }
 
-.linkMobile:hover:before, .linkMobile:focus:before {
+.linkMobile:hover:before,
+.linkMobile:focus:before {
   left: 0;
   right: 0;
 }

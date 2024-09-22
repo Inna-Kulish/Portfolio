@@ -21,11 +21,11 @@ const Header: React.FC = () => {
 
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <Logo className={styles.logo} />
+      <Link to="/" className={styles.logoLink}>
+        <Logo className={styles.logo} width={90} height={90}/>
       </Link>
-      <nav className={styles.navbar}>
-        <ul>
+      <div className={styles.navbar}>
+        <ul className={styles.list}>
           {NAV_LINKS.map(({ title, sectionId }, index) => (
             <li key={`${title}_${index}`} className={styles.item}>
               <a
@@ -37,21 +37,19 @@ const Header: React.FC = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
 
       {/* Mobile menu */}
-      <div className={styles.mobileContainer}>
         <button
           className={styles.menuBtn}
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
           {isMenuToggled ? (
-    <Cross className={`${styles.crossIcon} ${styles.rotatingIn}`} />
+    <Cross className={`${styles.crossIcon} ${styles.rotatingIn}`} width={32} height={32}/>
   ) : (
     <Menu className={`${styles.menuIcon} ${styles.rotatingOut}`} width={28} height={32} />
   )}
         </button>
-      </div>
       {isMenuToggled && (
         <div className={styles.mobileBox}>
           <ul className={styles.mobileList}>
