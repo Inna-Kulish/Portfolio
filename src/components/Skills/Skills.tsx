@@ -13,7 +13,7 @@ const Skills: React.FC = () => {
                 <ul className={styles.list}>
                     {SKILLS_LIST.map(({name, Icon}, index) => (
                         <li className={styles.item} key={`${name}_${index}`}>
-                            <Icon/>
+                            <Icon className={styles.logoSkills} />
                             {name}</li>
                     ))}
                 </ul>
