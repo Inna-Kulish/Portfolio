@@ -8,7 +8,6 @@
 
 .list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -16,8 +15,7 @@
 
 .item {
   display: flex;
-  flex-direction: row;
-  position: relative;
+  flex-direction: column;
   margin-top: 2rem;
   width: 100%;
 
@@ -27,6 +25,11 @@
   overflow: hidden;
   transition: 0.3s;
   background: $white;
+
+  @media screen and (min-width: 965px) {
+flex-direction: row;
+  }
+
 }
 
 .item:hover,
@@ -36,8 +39,13 @@
 }
 
 .photo {
-  flex: 1 1 20rem;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 965px) {
+      flex: 1 1 20rem;
+    }
 }
 
 .content {
@@ -45,30 +53,44 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  flex-wrap: wrap;
-  flex: 1 1 70rem;
+
+  @media screen and (min-width: 965px) {
+      flex: 1 1 70rem;
+    }
 }
 
 .course {
-  font-size: 32px;
+  font-size: 24px;
   color: $hero-title;
   padding: 0.5rem 0;
   font-weight: 600;
   text-align: left;
   margin-left: 1rem;
+
+  @media screen and (min-width: 965px) {
+      font-size: 32px;
+    }
 }
 
 .school {
-  font-size: 1.5rem;
+  font-size: 18px;
   margin-left: 1rem;
   text-align: left;
+
+  @media screen and (min-width: 965px) {
+    font-size: 24px;
+  }
 }
 
 .year {
-  font-size: 28px;
+  font-size: 20px;
   color: $green;
   text-align: left;
   margin: 1rem;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
+
+  @media screen and (min-width: 965px) {
+    font-size: 28px;
+  }
 }
