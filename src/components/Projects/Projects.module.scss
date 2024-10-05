@@ -12,15 +12,18 @@
 
 .item {
   position: relative;
+  overflow: hidden;
   flex: 1 1 25rem;
   height: 25rem;
 
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem $black20;
-  overflow: hidden;
 
   perspective: 1000px;
   transition: transform 0.1s ease-out;
+
+  @media screen and (min-width: 965px) {
+      box-shadow: 0 0.5rem 1rem $black20;
+    }
 }
 
 .photo {
@@ -31,8 +34,6 @@
 
 .content {
   position: absolute;
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 100%;
   top: 85%;
@@ -52,7 +53,6 @@
   height: 4rem;
   width: 100%;
   padding-left: 1rem;
-
   
   background: $yellow;
 
@@ -62,23 +62,22 @@ font-size: 22px;
 }
 
 .desc {
-  margin: 2rem;
+  padding: 20px;
 }
 
 .btnWrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 2rem;
 }
 
 .btn {
   display: flex;
   gap: 10px;
-  margin-right: 2rem;
-  padding: 1.5rem 2.5rem;
+  padding: 15px;
   align-items: center;
 
-  font-size: 1.5rem;
+  font-size: 18px;
   line-height: 0;
 
   color: $white;
