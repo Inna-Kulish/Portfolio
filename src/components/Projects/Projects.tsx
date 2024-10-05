@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
               style={stylesMap[index] || {}}
             >
               <picture>
-                <source srcSet={`${photo} 1x, ${photo2x} 2x`} />
+                <source srcSet={`${photo} 1x, ${photo2x} 2x`} sizes="(max-width: 600px) 100vw, (min-width: 600px) 50vw"/>
                 <img
                   className={`projectPhoto ${styles.photo}`}
                   src={photo}
@@ -42,11 +42,11 @@ const Projects: React.FC = () => {
                 <div className={styles.desc}>
                   <p>{description}</p>
                   <div className={styles.btnWrap}>
-                    <a className={styles.btn} href={page} target="_blank">
+                    <a className={styles.btn} href={page} target="_blank" rel="noopener noreferrer">
                       <Eye />
                       View
                     </a>
-                    <a className={styles.btn} href={github} target="_blank">
+                    <a className={styles.btn} href={github} target="_blank" rel="noopener noreferrer">
                       Code
                       <Code />
                     </a>

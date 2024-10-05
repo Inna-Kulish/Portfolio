@@ -4,11 +4,13 @@ import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 
 const SharedLayout: React.FC = () => (
-    <>
-        <Header />
-        <Outlet />
-        <Footer />
-    </>
+  <>
+    <Header />
+    <div className="container">
+      <Outlet />
+    </div>
+    <Footer />
+  </>
 );
 
 export default SharedLayout;
