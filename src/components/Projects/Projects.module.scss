@@ -1,8 +1,3 @@
-.projects {
-  padding: 2rem;
-  background-color: $hero-title;
-}
-
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -22,8 +17,8 @@
   transition: transform 0.1s ease-out;
 
   @media screen and (min-width: 965px) {
-      box-shadow: 0 0.5rem 1rem $black20;
-    }
+    box-shadow: 0 0.5rem 1rem $black20;
+  }
 }
 
 .photo {
@@ -53,11 +48,11 @@
   height: 4rem;
   width: 100%;
   padding-left: 1rem;
-  
+
   background: $yellow;
 
   h3 {
-font-size: 22px;
+    font-size: 22px;
   }
 }
 
@@ -65,7 +60,7 @@ font-size: 22px;
   padding: 20px;
 }
 
-.btnWrap {
+.btnBox {
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
@@ -90,15 +85,15 @@ font-size: 22px;
 }
 
 .wrapBtn {
-display: flex;
-justify-content: center;
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
 }
 
 .viewBtn {
   display: flex;
   gap: 15px;
   width: fit-content;
-  margin-top: 5rem;
   padding: 1.2rem 2.6rem;
   align-items: center;
 

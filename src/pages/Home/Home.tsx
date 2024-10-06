@@ -5,6 +5,9 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import Skills from "../../components/Skills/Skills";
 import Education from "../../components/Education/Education";
 import Projects from "../../components/Projects/Projects";
+import ProjectBtn from "../../components/Projects/ProjectBtn";
+import styles from "./Home.module.scss";
+import ArrowRight from "@/assets/icons/about/arrowRight.svg?react";
 
 const Home: React.FC = () => {
   return (
@@ -14,7 +17,10 @@ const Home: React.FC = () => {
       <AboutMe />
       <Skills />
       <Education />
-      <Projects/>
+      <section className={styles.sectionProject}>
+      <Projects start={0} end={6} />
+      <ProjectBtn IconEnd={ArrowRight} title="View All"/>
+      </section>
     </>
   );
 };
