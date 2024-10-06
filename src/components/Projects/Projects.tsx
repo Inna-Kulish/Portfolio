@@ -6,18 +6,21 @@ import { SectionIds } from "../header/navList";
 import { PROJECTS_LIST } from "./projectsList";
 import Eye from "@/assets/icons/projects/eye.svg?react";
 import Code from "@/assets/icons/projects/code.svg?react";
-import ArrowRight from "@/assets/icons/about/arrowRight.svg?react";
-import { Link } from "react-router-dom";
 import { handleMouseLeave, handleMouseMove } from "../../utils/use3dEffect";
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  start?: number;
+  end?: number;
+}
+
+const Projects: React.FC<ProjectsProps> = ({start, end}) => {
   const [stylesMap, setStylesMap] = useState<Record<number, CSSProperties>>({});
 
   return (
     <section id={SectionIds.projects} className={styles.projects}>
       <Title title="Projects" span="Made" color="dark" Icon={Monitor} />
       <ul className={styles.list}>
-        {PROJECTS_LIST.slice(0, 6).map(
+        {PROJECTS_LIST.slice(start, end).map(
           ({ name, photo, photo2x, github, page, description }, index) => (
             <li
               className={styles.item}
@@ -41,7 +44,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className={styles.desc}>
                   <p>{description}</p>
-                  <div className={styles.btnWrap}>
+                  <div className={styles.btnBox}>
                     <a className={styles.btn} href={page} target="_blank" rel="noopener noreferrer">
                       <Eye />
                       View
@@ -57,12 +60,6 @@ const Projects: React.FC = () => {
           )
         )}
       </ul>
-      <div className={styles.wrapBtn}>
-        <Link className={styles.viewBtn} to="/projects">
-          View All
-          <ArrowRight />
-        </Link>
-      </div>
     </section>
   );
 };
