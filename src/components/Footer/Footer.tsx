@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer id={SectionIds.contact} className={styles.footer}>
+    <footer id={SectionIds.contact} className={`container ${styles.footer}`}>
       <div className={styles.box}>
         <h3 className={styles.title}>Inna's Portfolio</h3>
         <p className={styles.desc}>

@@ -7,6 +7,7 @@ import { PROJECTS_LIST } from "./projectsList";
 import Eye from "@/assets/icons/projects/eye.svg?react";
 import Code from "@/assets/icons/projects/code.svg?react";
 import { handleMouseLeave, handleMouseMove } from "../../utils/use3dEffect";
+import { motion } from "framer-motion";
 
 interface ProjectsProps {
   start?: number;
@@ -16,10 +17,22 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({start, end}) => {
   const [stylesMap, setStylesMap] = useState<Record<number, CSSProperties>>({});
 
+  const boxAnimation = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {ease: "easeOut", duration: 0.3,}
+    },
+    };
+
   return (
-    <section id={SectionIds.projects} className={styles.projects}>
+    <motion.section initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.3}} id={SectionIds.projects} className={styles.projects}>
       <Title title="Projects" span="Made" color="dark" Icon={Monitor} />
-      <ul className={styles.list}>
+      <motion.ul variants={boxAnimation} className={styles.list}>
         {PROJECTS_LIST.slice(start, end).map(
           ({ name, photo, photo2x, github, page, description }, index) => (
             <li
@@ -59,8 +72,8 @@ const Projects: React.FC<ProjectsProps> = ({start, end}) => {
             </li>
           )
         )}
-      </ul>
-    </section>
+      </motion.ul>
+    </motion.section>
   );
 };
 

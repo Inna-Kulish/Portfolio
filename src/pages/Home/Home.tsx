@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <AboutMe />
       <Skills />
       <Education />
-      <section className={styles.sectionProject}>
+      <section className={`container ${styles.sectionProject}`}>
       <Projects start={0} end={6} />
       <ProjectBtn IconEnd={ArrowRight} title="View All"/>
       </section>
