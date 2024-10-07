@@ -7,13 +7,26 @@ import women2x from "@/assets/images/education/women@2x.jpg";
 import goit from "@/assets/images/education/goit.jpg";
 import goit2x from "@/assets/images/education/goit@2x.jpg";
 import { SectionIds } from "../header/navList";
+import { motion } from "framer-motion";
 
 const Education: React.FC = () => {
+    const boxAnimation = {
+    hidden: {
+        y: 300,
+      opacity:0
+    },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity:1,
+      transition: {ease: "easeOut", duration: 0.1, delay: custom * 0.3}
+    }),
+    };
+  
   return (
-    <section id={SectionIds.education} className={styles.education}>
+    <section id={SectionIds.education} className={`container ${styles.education}`}>
       <Title title="My" span="Education" Icon={Hat} color="light" />
-      <ul className={styles.list}>
-        <li className={styles.item}>
+      <motion.ul initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.3}} className={styles.list}>
+        <motion.li custom={1} variants={boxAnimation} className={styles.item}>
           <div className={styles.photo}>
             <picture>
               <source srcSet={`${women} 1x, ${women2x} 2x`} />
@@ -27,8 +40,8 @@ const Education: React.FC = () => {
             <p className={styles.school}>Women Go Tech Acceleration Program</p>
             <p className={styles.year}>2024 | Pursuing</p>
           </div>
-        </li>
-        <li className={styles.item}>
+        </motion.li>
+        <motion.li custom={2} variants={boxAnimation} className={styles.item}>
           <div className={styles.photo}>
             <picture>
               <source srcSet={`${goit} 1x, ${goit2x} 2x`} />
@@ -40,8 +53,8 @@ const Education: React.FC = () => {
             <p className={styles.school}>course at GoIT school</p>
             <p className={styles.year}>2022-2023 | Completed</p>
           </div>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </section>
   );
 };

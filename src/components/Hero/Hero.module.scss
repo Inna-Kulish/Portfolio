@@ -167,22 +167,6 @@
 .heroSection {
   min-width: 100%;
   width: 100vw;
-  height: 1050px;
-  display: flex;
-  flex-direction: column;
-  padding: 150px 10% 70px;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 425px) {
-    height: 900px;
-  }
-
-  @media screen and (min-width: 965px) {
-    flex-direction: row;
-    padding: 0 10%;
-    height: 100vh;
-  }
 }
 
 .particles {
@@ -199,6 +183,27 @@
 
   @media screen and (min-width: 965px) {
     height: 100%;
+  }
+}
+
+.contentWrap {
+  display: flex;
+  padding: 150px 10% 70px;
+  height: 1050px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
+  @media screen and (max-width: 425px) {
+    height: 900px;
+  }
+
+  @media screen and (min-width: 965px) {
+    flex-direction: row;
+    padding: 0 10%;
+    height: 100vh;
   }
 }
 

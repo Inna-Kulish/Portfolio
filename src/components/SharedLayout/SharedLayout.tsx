@@ -6,9 +6,7 @@ import Footer from "../Footer/Footer";
 const SharedLayout: React.FC = () => (
   <>
     <Header />
-    <div className="container">
       <Outlet />
-    </div>
     <Footer />
   </>
 );

@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1000;
 
   display: flex;
@@ -14,6 +15,14 @@
 
   background-color: $white;
   box-shadow: 0 1px 4px $shadow;
+}
+
+.desktopWrap {
+  @media screen and (max-width: 768px) {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .navbar {
@@ -83,10 +92,17 @@
   }
 }
 
-.mobileBox {
+.backdrop {
   position: absolute;
   top: 94px;
   right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black50;
+}
+
+.mobileBox {
+  margin-left: auto;
   width: 50vw;
   height: 100vh;
   padding: 20px;
@@ -139,37 +155,4 @@
 .linkMobile.activeMobile::before {
   left: 0;
   right: 0;
-}
-
-@keyframes rotateIn {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes rotateOut {
-  from {
-    transform: rotate(180deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.crossIcon,
-.menuIcon {
-  transition: transform 0.3s ease;
-}
-
-.rotatingIn {
-  animation: rotateIn 0.3s forwards;
-}
-
-.rotatingOut {
-  animation: rotateOut 0.3s forwards;
 }
