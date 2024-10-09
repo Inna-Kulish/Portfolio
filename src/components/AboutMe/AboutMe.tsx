@@ -54,7 +54,7 @@ const AboutMe: React.FC = () => {
           </div>
           <a
             className={styles.resumeBtn}
-            href="https://drive.google.com/file/d/1yEOVTId97ul4D4K7r2lr28nnz3Ph3aDx/view"
+            href="https://drive.google.com/file/d/1BwXwzkJb1eeWNv6lR4VmuQk4NRRZI5J6/view"
             target="_blank"
           >
             Resume
